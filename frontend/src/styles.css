@@ -1,0 +1,104 @@
+:root {
+  /* Antigravity Palette */
+  --bg-deep: #020617; /* Deepest Void */
+  --bg-dark: #0f172a; /* Slate 900 */
+  --primary-color: #0ea5e9; /* Sky Blue */
+  --secondary-color: #3b82f6; /* Royal Blue */
+  --accent-color: #06b6d4; /* Cyan */
+  --accent-glow: rgba(56, 189, 248, 0.15); /* Light blue glow */
+  --accent-secondary-glow: rgba(139, 92, 246, 0.15); /* Violet glow */
+  
+  --text-main: #f1f5f9; /* Slate 100 */
+  --text-muted: #94a3b8; /* Slate 400 */
+  --bg-card: rgba(30, 41, 59, 0.7); /* Slate 800 with opacity for glass effect */
+  --border-color: #334155; /* Slate 700 */
+  --success: #10b981;
+  --error: #ef4444;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-deep);
+  background-image: 
+    radial-gradient(circle at 15% 50%, var(--accent-glow), transparent 25%),
+    radial-gradient(circle at 85% 30%, var(--accent-secondary-glow), transparent 25%);
+  background-attachment: fixed;
+  color: var(--text-main);
+  line-height: 1.6;
+  padding-top: 80px; /* Offset for fixed navbar */
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 1rem 0;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Global Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 6px 20px rgba(14, 165, 233, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: rgba(14, 165, 233, 0.1);
+  box-shadow: 0 0 15px rgba(14, 165, 233, 0.2);
+}
+
+/* Section Styling */
+section {
+  padding: 100px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  background: linear-gradient(to right, #fff, #94a3b8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
